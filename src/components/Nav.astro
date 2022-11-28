@@ -1,0 +1,14 @@
+---
+import NavLink from "./NavLink.astro"
+---
+
+<script>
+  import { gsap } from "gsap"
+
+  gsap.from(".nav-link", { duration: 0.5, y: -3, opacity: 0, stagger: 0.2, delay: 0.8 })
+</script>
+
+<div class="max-w-screen-xl mx-auto font-mono py-4 flex items-center justify-center space-x-4">
+  <NavLink href="/">home</NavLink>
+  <NavLink href="/projects">projects</NavLink>
+</div>

@@ -1,0 +1,12 @@
+---
+const { href } = Astro.props
+
+const currentPath = new URL(Astro.request.url).pathname
+const isActive = href === currentPath
+---
+
+<a
+  class={isActive ? "text-primary font-bold nav-link" : "text-secondary hover:text-white transition-colors nav-link"}
+  {href}>
+  <slot />
+</a>
